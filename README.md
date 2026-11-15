@@ -35,6 +35,14 @@
 
 ---
 
+## 🖼️ Preview
+
+<p align="center">
+  <a href="docs/assets/free-preview.svg"><img src="docs/assets/free-preview.svg" alt="Illustration of the local demo shop login alongside API and Selenium pytest examples" width="960" /></a>
+</p>
+
+> **Illustrative preview, not an application screenshot.** It represents the included local login demo and 2 API + 2 Selenium UI examples; no production dashboard or hosted service is provided.
+
 ## ✨ Features
 
 A **free, MIT-licensed Python QA automation starter kit** built for hands-on learning, experimenting, and portfolio practice. It runs against an included local demo shop rather than a real website or production service.
