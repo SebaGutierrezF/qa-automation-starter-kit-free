@@ -1,0 +1,4 @@
+# Show a custom sponsorship option using the existing support page.
+# This does not enable GitHub Sponsors automatically.
+custom:
+  - https://buymeacoffee.com/sebagutierrezf
