@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="releases/qa-automation-starter-kit-free-v0.1.1.zip"><img alt="Download Free ZIP" src="https://img.shields.io/badge/%E2%AC%87%20Download-Free%20ZIP-1D8E66?style=for-the-badge" /></a>
+  <a href="https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip"><img alt="Download Free ZIP" src="https://img.shields.io/badge/%E2%AC%87%20Download-Free%20ZIP-1D8E66?style=for-the-badge" /></a>
   <a href="free-v0.1.1/"><img alt="Browse source" src="https://img.shields.io/badge/%F0%9F%92%BB%20Browse-Source-3B82F6?style=for-the-badge" /></a>
   <a href="https://buymeacoffee.com/sebagutierrezf"><img alt="Support this project" src="https://img.shields.io/badge/%E2%98%95%20Support-Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" /></a>
 </p>
@@ -69,7 +69,7 @@ flowchart LR
 
 ## 📦 Download & installation
 
-**[⬇ Download the certified Free v0.1.1 ZIP](releases/qa-automation-starter-kit-free-v0.1.1.zip)**
+**[⬇ Download the certified Free v0.1.1 ZIP](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip)**
 
 1. Download and fully extract the ZIP.
 2. Open PowerShell in the **extracted package folder**.
@@ -157,7 +157,7 @@ Donations are entirely voluntary; **Free remains free** and no payment is requir
 
 **QA Automation Starter Kit Free v0.1.1** es un proyecto gratuito de aprendizaje de automatización con Python. Incluye **2 pruebas API y 2 pruebas UI con Selenium**, un servidor local de demostración y ejemplos de Page Objects.
 
-Descarga el [ZIP certificado](releases/qa-automation-starter-kit-free-v0.1.1.zip), descomprímelo y sigue las instrucciones de [instalación](free-v0.1.1/README.md). Requiere Windows, Python, Chrome/ChromeDriver y dependencias previamente disponibles; **no las descarga automáticamente**.
+Descarga el [ZIP certificado](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip), descomprímelo y sigue las instrucciones de [instalación](free-v0.1.1/README.md). Requiere Windows, Python, Chrome/ChromeDriver y dependencias previamente disponibles; **no las descarga automáticamente**.
 
 El código Free usa licencia MIT. Si quieres apoyar voluntariamente su desarrollo, puedes hacerlo mediante [Buy Me a Coffee](https://buymeacoffee.com/sebagutierrezf).
 
