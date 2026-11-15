@@ -1,0 +1,29 @@
+{
+  "file_sha256": {
+    "LICENSE": "95491b84893a8512d3acad699ac6d2613912fed71dd54ec3f21986d06dc26777",
+    "README.md": "2126d9ff7026841d4b8b995096451d66439ca210f52729cb70df03678e489e43",
+    "THIRD_PARTY_NOTICES.md": "f12444b619d43e4a3dcbb3ba0366fb45d13a1a534db759116804a0e8542ac90a",
+    "demo_shop/__init__.py": "4aabbed441cf59a38520b66e149833c090f40abdd9bbf0b56f7bb8de5ff0c3a9",
+    "demo_shop/server.py": "1dd15c43f37280747201525a1a3ac0ac2e20486c34760f89f97439bb6569fa3a",
+    "demo_shop/static/style.css": "9be548c7279d39be9604ecc6e05b05349462d522a1aba4ffb42bae2a15600252",
+    "pyproject.toml": "906966e03d1d055349ec3f11b2b91f0603264975514d7841792516f5b371ff9d",
+    "requirements-offline.txt": "f114e3177025f554d5ace5d88dde2ff99b0fbb058a9868bd40ce66dfb6930f58",
+    "src/qa_starter/__init__.py": "82185ceef988b74fed06bd792bfe3cb28e90a2f7d0587687f06c81401cd8150f",
+    "src/qa_starter/api_client.py": "b76e6e36ed7868b24aad3d9a06250be66e53326cdbc6a84b446b962a0e6b8ce6",
+    "src/qa_starter/browser.py": "11da552d317ed3f55e7dde5b59963a42dc7d65555029b2ad99cb561f2bbfc0d8",
+    "src/qa_starter/pages/__init__.py": "5b00e4ac7a9dd7c57fec6fbe9f843361247ac429a523375bcdad3494b15aaa9d",
+    "src/qa_starter/pages/login_page.py": "6623b1c67ba40c4abd94ea6eb80f7c169a442d9d7806e48dcc880129299fdded",
+    "tests/api/test_catalog.py": "791a560c0280b68ae3ccc78e10dd88e030be5e514a080ed04f63bacde977fae1",
+    "tests/conftest.py": "3b5d3817053f0119ef767bbaf41bb64abab1ab50116590ef23d2811b4b59e92f",
+    "tests/ui/test_login.py": "193e013dc75c1a15d1d4e28ffe9cf651d93132580044256df9eec55587e37b76",
+    "tools/inspect_offline_environment.ps1": "0c285f5fe0ef417f0333507909d0b45148fea9d15bb88e3002f222fe3ca19be6",
+    "tools/setup_offline.ps1": "2662ae1aa45ff069f430e406cb3c60964d80e5ed775bb8eef323d7a9a51971eb",
+    "tools/verify_api.ps1": "2da607ff385152e7f4d2a3a764d7cb5222c4ea7df0df56a54456b2e1a238bdbc",
+    "tools/verify_free.ps1": "decb199fb2c2db382b20c30092f40a03699e8e369efe2e66fc6ea383b10af2d4",
+    "tools/verify_pytest_junit.py": "df6da76d36ff00d80bc450689e41eada5f312c796e57a86932638bedaee08af4"
+  },
+  "name": "qa-automation-starter-kit-free-v0.1.1",
+  "network": "loopback-only",
+  "status": "local-alpha-not-published",
+  "version": "0.1.1"
+}

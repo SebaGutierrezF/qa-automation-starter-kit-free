@@ -1,0 +1,12 @@
+[project]
+name = "qa-automation-starter-kit-free"
+version = "0.1.1"
+description = "Local-only QA Automation Starter Kit Community Free Alpha"
+requires-python = ">=3.12,<3.14"
+license = {text = "MIT"}
+
+[tool.pytest.ini_options]
+minversion = "8.3"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["ui: local Chrome/Selenium UI checks", "api: loopback API checks"]

@@ -1,0 +1,4 @@
+# These are direct dependency pins, NOT a complete transitive OS-specific lock.
+# The wheelhouse must include compatible transitive wheels for the target Python/OS.
+pytest==8.3.4
+selenium==4.28.1

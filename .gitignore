@@ -1,0 +1,14 @@
+# No local environments, secrets or runtime artifacts
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+reports/
+logs/
+wheelhouse/
+chromedriver.exe
+*.pem
+*.key
+.pytest_cache/
