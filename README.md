@@ -1,8 +1,43 @@
-# QA Automation Starter Kit — Community Free v0.1.1 (alpha)
+<h1 align="center">🧪 QA Automation Starter Kit</h1>
 
-A small Python project for practicing **API tests with pytest** and **browser tests with Selenium** on Windows. It includes a demo web app that runs on your machine. The tests run against that local app, not a public website or a real account.
+<p align="center"><strong>Community Free · v0.1.1 (Alpha)</strong></p>
 
-**[Download v0.1.1 (ZIP)](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip)** · [Browse source](free-v0.1.1/) · [Report an issue](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/issues)
+<p align="center">
+  A small Python project for practicing API tests with pytest and browser tests with Selenium.<br />
+  Four tests against an included local demo app — no production accounts or websites.
+</p>
+
+<p align="center">
+  <a href="https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip">
+    <img alt="Download Free v0.1.1 ZIP" src="https://img.shields.io/badge/Download-Free%20ZIP-2E8B67?style=for-the-badge" />
+  </a>
+  <a href="free-v0.1.1/">
+    <img alt="Browse the source code" src="https://img.shields.io/badge/Browse-Source-3677B8?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/issues">
+    <img alt="Report an issue" src="https://img.shields.io/badge/Share-Feedback-56677B?style=for-the-badge" />
+  </a>
+</p>
+
+<p align="center">
+  <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" />
+  <img alt="Selenium 4.28.1" src="https://img.shields.io/badge/Selenium-4.28.1-43B02A?logo=selenium&logoColor=white" />
+  <img alt="pytest 8.3.4" src="https://img.shields.io/badge/pytest-8.3.4-0A9EDC?logo=pytest&logoColor=white" />
+  <img alt="Windows 10 and 11" src="https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4?logo=windows&logoColor=white" />
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-2F8F56" /></a>
+</p>
+
+---
+
+## Preview
+
+<p align="center">
+  <a href="docs/assets/free-preview.svg">
+    <img src="docs/assets/free-preview.svg" alt="Illustration of the local login demo and the four pytest checks" width="900" />
+  </a>
+</p>
+
+*Illustration based on the included demo app and test cases, not an actual application screenshot. The release has no hosted dashboard.*
 
 ## What does it test?
 
@@ -100,4 +135,17 @@ I know the offline dependency requirement makes onboarding harder. I want to lea
 
 ## License and optional support
 
-The Free code is [MIT-licensed](LICENSE); dependencies have their own licenses ([notices](free-v0.1.1/THIRD_PARTY_NOTICES.md)). If it helped you, a star or feedback is appreciated. [Buy Me a Coffee](https://buymeacoffee.com/sebagutierrezf) is optional; no payment is required to use the project.
+The Free code is [MIT-licensed](LICENSE); dependencies have their own licenses ([third-party notices](free-v0.1.1/THIRD_PARTY_NOTICES.md)). Feedback and stars are appreciated. Supporting development is optional and never required to download or use Free.
+
+<p align="center">
+  <a href="https://buymeacoffee.com/sebagutierrezf">
+    <img alt="Buy Me a Coffee — optional support" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Optional%20support-FFDD00?logo=buymeacoffee&logoColor=black" />
+  </a>
+</p>
+
+<details>
+<summary><strong>About the separate Pro edition</strong></summary>
+
+A separate proprietary Pro package has more local examples (16 Pro tests plus 2 Helpdesk tests), Page Object structure, and HTML/JUnit reporting. It is undergoing buyer-experience validation and is **not linked for purchase here**. Free remains available independently under the MIT license.
+
+</details>
