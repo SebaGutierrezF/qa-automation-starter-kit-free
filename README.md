@@ -144,8 +144,12 @@ The Free code is [MIT-licensed](LICENSE); dependencies have their own licenses (
 </p>
 
 <details>
-<summary><strong>About the separate Pro edition</strong></summary>
+<summary><strong>Optional Pro edition — $49 one-time purchase</strong></summary>
 
-A separate proprietary Pro package has more local examples (16 Pro tests plus 2 Helpdesk tests), Page Object structure, and HTML/JUnit reporting. It is undergoing buyer-experience validation and is **not linked for purchase here**. Free remains available independently under the MIT license.
+[QA Automation Starter Kit Pro v1.0.0](https://sebagutierrez3.gumroad.com/l/qa-automation-starter-kit-pro) is a separate proprietary source-code ZIP with **16 Pro tests and 2 local Helpdesk examples**, reusable Page Object components, an HTML report for the 16 core cases, and JUnit results. It was validated by the seller on Windows.
+
+**Before buying:** the documented setup requires Python 3.12, Chrome, a matching ChromeDriver and a prepared offline wheelhouse. ChromeDriver and wheel files are **not included**. This is a developer toolkit, not a one-click installer; adapting it to other apps requires programming work.
+
+Free remains available independently under the MIT license. You do not need Pro to run the four Free tests.
 
 </details>
