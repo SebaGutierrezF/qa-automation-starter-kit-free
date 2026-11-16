@@ -1,166 +1,103 @@
-<p align="center">
-  <img alt="QA Automation Starter Kit" src="https://img.shields.io/badge/%F0%9F%A7%AA_QA-Automation_Starter_Kit-19647E?style=for-the-badge" />
-</p>
+# QA Automation Starter Kit — Community Free v0.1.1 (alpha)
 
-<h1 align="center">QA Automation Starter Kit</h1>
-<h3 align="center">Community Free · v0.1.1</h3>
+A small Python project for practicing **API tests with pytest** and **browser tests with Selenium** on Windows. It includes a demo web app that runs on your machine. The tests run against that local app, not a public website or a real account.
 
-<p align="center">
-  <strong>Learn Python test automation with a real, runnable local project.</strong><br />
-  Selenium UI tests · API checks · Page Objects · pytest · Windows
-</p>
+**[Download v0.1.1 (ZIP)](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip)** · [Browse source](free-v0.1.1/) · [Report an issue](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/issues)
 
-<p align="center">
-  <a href="https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip"><img alt="Download Free ZIP" src="https://img.shields.io/badge/%E2%AC%87%20Download-Free%20ZIP-1D8E66?style=for-the-badge" /></a>
-  <a href="free-v0.1.1/"><img alt="Browse source" src="https://img.shields.io/badge/%F0%9F%92%BB%20Browse-Source-3B82F6?style=for-the-badge" /></a>
-  <a href="https://buymeacoffee.com/sebagutierrezf"><img alt="Support this project" src="https://img.shields.io/badge/%E2%98%95%20Support-Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" /></a>
-</p>
+## What does it test?
 
-<p align="center">
-  <img alt="Free v0.1.1" src="https://img.shields.io/badge/release-v0.1.1-2ea44f" />
-  <img alt="Windows 10 and 11" src="https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4?logo=windows" />
-  <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" />
-  <img alt="pytest 8.3.4" src="https://img.shields.io/badge/pytest-8.3.4-0A9EDC?logo=pytest&logoColor=white" />
-  <img alt="Selenium 4.28.1" src="https://img.shields.io/badge/Selenium-4.28.1-43B02A?logo=selenium&logoColor=white" />
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue" /></a>
-</p>
+The release contains **four tests**:
 
-<p align="center">
-  <a href="#-features">Features</a> ·
-  <a href="#-download--installation">Installation</a> ·
-  <a href="#-how-it-works">How it works</a> ·
-  <a href="#-free-vs-pro">Free vs Pro</a> ·
-  <a href="#-support-the-project">Support</a>
-</p>
+| Test | Check |
+| --- | --- |
+| [`test_api_001_health`](free-v0.1.1/tests/api/test_catalog.py) | The local `GET /api/health` endpoint returns HTTP 200 and the expected data. |
+| [`test_api_002_catalog`](free-v0.1.1/tests/api/test_catalog.py) | The demo catalog returns two products with positive prices. |
+| [`test_ui_001_login_success`](free-v0.1.1/tests/ui/test_login.py) | A fictional user can sign in and see the dashboard. |
+| [`test_ui_002_invalid_login`](free-v0.1.1/tests/ui/test_login.py) | A wrong password produces an error message. |
 
----
+The source also includes a [local demo server](free-v0.1.1/demo_shop/server.py), a small [API client](free-v0.1.1/src/qa_starter/api_client.py), a [Selenium Page Object](free-v0.1.1/src/qa_starter/pages/login_page.py), and PowerShell scripts to run the tests.
 
-## 🖼️ Preview
+This is a **small learning example**, not a production-ready testing framework or a tool that automatically adapts to other websites. The demo server binds to `127.0.0.1` only.
 
-<p align="center">
-  <a href="docs/assets/free-preview.svg"><img src="docs/assets/free-preview.svg" alt="Illustration of the local demo shop login alongside API and Selenium pytest examples" width="960" /></a>
-</p>
+## What you need
 
-> **Illustrative preview, not an application screenshot.** It represents the included local login demo and 2 API + 2 Selenium UI examples; no production dashboard or hosted service is provided.
+- Windows 10/11, PowerShell and Python **3.12** (the version validated locally).
+- For API tests: pytest **8.3.4**.
+- For UI tests: Selenium **4.28.1**, Chrome, and a matching local ChromeDriver.
 
-## ✨ Features
+**Known setup limitation:** dependencies, wheel files, Chrome and ChromeDriver are **not bundled**. The setup script is offline-only and **does not download missing packages**. You must already have a compatible Python environment or supply a complete local `wheelhouse/`. This is not a one-click installer.
 
-A **free, MIT-licensed Python QA automation starter kit** built for hands-on learning, experimenting, and portfolio practice. It runs against an included local demo shop rather than a real website or production service.
+## Running the tests
 
-| 🧪 API testing | 🌐 Browser automation |
-|:--|:--|
-| **2 runnable API tests** covering the local shop's catalog endpoints, with a reusable API client. | **2 runnable Selenium UI tests** using ChromeDriver and a small Page Object example. |
+Download and extract the release ZIP, then open PowerShell in the **extracted folder** that contains `tools/` and `tests/`.
 
-| 🧱 Beginner-friendly structure | 🔐 Local-first execution |
-|:--|:--|
-| Python source, test fixtures, a demo server, PowerShell setup and verification tools. | The demo binds to **`127.0.0.1`**. No external website, real account or production credentials are required. |
-
-## 🔍 At a glance
-
-```mermaid
-flowchart LR
-    A["Local demo shop<br/>127.0.0.1"] --> B["2 API tests"]
-    A --> C["2 Selenium UI tests"]
-    B --> D["pytest results"]
-    C --> D
-```
-
-**Verified locally on Windows:** 2 API examples and 2 UI examples (4 total). There is no hosted demo or CI badge claiming an automatic build.
-
-## 📦 Download & installation
-
-**[⬇ Download the certified Free v0.1.1 ZIP](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip)**
-
-1. Download and fully extract the ZIP.
-2. Open PowerShell in the **extracted package folder**.
-3. Provide the required dependencies and the path to your compatible ChromeDriver.
-4. Run the scripts below.
-
-**Requirements:** Windows 10/11, PowerShell, Python 3.12, pytest **8.3.4**, Selenium **4.28.1**, Chrome, and a compatible ChromeDriver.
-
-> [!IMPORTANT]
-> Chrome, ChromeDriver, Python packages and wheels are **not bundled**. The offline installer does **not** download missing dependencies. You need an existing compatible Python environment or a complete local `wheelhouse/`. Consult the [package README](free-v0.1.1/README.md) before setup.
+First, inspect which Python environments and drivers are already available:
 
 ```powershell
-# Replace this path with your installed, compatible chromedriver.exe:
-$env:CHROMEDRIVER_PATH = 'C:\your-tools\chromedriver.exe'
-
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\setup_offline.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\verify_api.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\verify_free.ps1
+.\tools\inspect_offline_environment.ps1
 ```
 
-Expected with all prerequisites installed: **2 API passes** and **4 passes in the full suite**. Missing prerequisites fail visibly instead of triggering downloads or silently skipping browser tests.
+**Option A — use an existing Python environment with the pinned packages:**
 
-<details>
-<summary><strong>🔎 Verify the original ZIP checksum</strong></summary>
+```powershell
+# Replace both paths with your own.
+$python = 'C:\path\to\venv\Scripts\python.exe'
 
-SHA-256:
+# API tests: no browser required
+.\tools\verify_api.ps1 -PythonExecutable $python
+
+# All four tests: Chrome and ChromeDriver required
+$env:CHROMEDRIVER_PATH = 'C:\path\to\chromedriver.exe'
+.\tools\verify_free.ps1 -PythonExecutable $python
+```
+
+**Option B — install from a complete offline wheelhouse:**
+
+Copy compatible wheels, including transitive dependencies, into a `wheelhouse/` folder next to `tools/`, then run:
+
+```powershell
+.\tools\setup_offline.ps1
+.\tools\verify_api.ps1
+
+$env:CHROMEDRIVER_PATH = 'C:\path\to\chromedriver.exe'
+.\tools\verify_free.ps1
+```
+
+With the required environment, the API script expects **2 passing tests** and the full script expects **4 passing tests**. Missing dependencies or a missing driver cause a visible error; browser tests are not silently skipped.
+
+After **Option B** you can view the demo manually:
+
+```powershell
+.\.venv\Scripts\python.exe -m demo_shop.server
+# Open http://127.0.0.1:8765/login
+```
+
+Stop it with Ctrl+C. The login details displayed by the demo are fictional test data.
+
+## Release integrity
+
+The [v0.1.1 ZIP](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/tag/v0.1.1) has this SHA-256:
 
 ```text
 f88f82e98db0de6c7cc290205ee3e132f5388fcd6b23d6a1a5111767b32b1646
 ```
 
-On Windows:
+To verify a download on Windows:
 
 ```powershell
 Get-FileHash .\qa-automation-starter-kit-free-v0.1.1.zip -Algorithm SHA256
 ```
 
-The [browseable source snapshot](free-v0.1.1/) is unchanged from the certified original, including its manifest and historical alpha README. The repository's presentation README can improve independently without modifying that snapshot.
+The [`free-v0.1.1/` source snapshot](free-v0.1.1/) is preserved as released. Its bundled README and manifest still say **“not published”** because they were generated *before* the GitHub release; that wording is outdated archival metadata. The original ZIP and its hash have not been changed.
 
-</details>
+## Feedback
 
-## 🧭 How it works
+I'm looking for feedback from people who didn't build this project. If you try it, [open an issue](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/issues) and tell me what you ran, where setup stopped, and which instructions were confusing.
 
-| Component | Purpose |
-|:--|:--|
-| [`demo_shop/`](free-v0.1.1/demo_shop/) | Local HTTP shop used only for test practice |
-| [`src/qa_starter/`](free-v0.1.1/src/qa_starter/) | API client, browser helper and Page Object example |
-| [`tests/api/`](free-v0.1.1/tests/api/) | Two local API checks |
-| [`tests/ui/`](free-v0.1.1/tests/ui/) | Two Selenium browser checks |
-| [`tools/`](free-v0.1.1/tools/) | Windows offline setup and verification scripts |
+Include Python/browser/driver versions and the relevant error message, but **remove personal paths, usernames, tokens or other private data** first.
 
-## 🚀 Free vs Pro
+I know the offline dependency requirement makes onboarding harder. I want to learn whether the examples and docs are useful before expanding this alpha.
 
-| | Community Free | Professional Pro |
-|:--|:--:|:--:|
-| Local API and browser examples | 4 | 16 Pro examples + 2 local Helpdesk examples |
-| Page Object approach | Basic example | Expanded framework |
-| HTML and JUnit reporting | Not included as a Pro reporting package | Included |
-| Full source code | ✅ | ✅ |
-| Availability | **Free download now** | Separate commercial edition; public checkout pending store approval |
+## License and optional support
 
-Pro is a separate, proprietary package. No live payment link is published while its storefront approval is pending.
-
-## 🔒 Safety, privacy & license
-
-- Designed for **local educational use** against `127.0.0.1`; it is **not** a hosted QA service or a ready-to-use integration for arbitrary websites.
-- Do not put production credentials, sensitive customer data or unauthorized sites into the example tests.
-- Free source code is published under the **[MIT License](LICENSE)**.
-- Python dependencies are distributed separately under their own licenses; see [third-party notices](free-v0.1.1/THIRD_PARTY_NOTICES.md).
-
-## ☕ Support the project
-
-If this Free kit is useful, you can **star the repository**, share it with another QA learner, or optionally support future development.
-
-<p align="center">
-  <a href="https://buymeacoffee.com/sebagutierrezf"><img alt="Buy Me a Coffee — support this project" src="https://img.shields.io/badge/%E2%98%95%20Buy%20Me%20a%20Coffee-Support%20this%20project-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" /></a>
-</p>
-
-Donations are entirely voluntary; **Free remains free** and no payment is required to download or use it.
-
----
-
-<details>
-<summary><strong>🇨🇱 Resumen en español</strong></summary>
-
-**QA Automation Starter Kit Free v0.1.1** es un proyecto gratuito de aprendizaje de automatización con Python. Incluye **2 pruebas API y 2 pruebas UI con Selenium**, un servidor local de demostración y ejemplos de Page Objects.
-
-Descarga el [ZIP certificado](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/download/v0.1.1/qa-automation-starter-kit-free-v0.1.1.zip), descomprímelo y sigue las instrucciones de [instalación](free-v0.1.1/README.md). Requiere Windows, Python, Chrome/ChromeDriver y dependencias previamente disponibles; **no las descarga automáticamente**.
-
-El código Free usa licencia MIT. Si quieres apoyar voluntariamente su desarrollo, puedes hacerlo mediante [Buy Me a Coffee](https://buymeacoffee.com/sebagutierrezf).
-
-</details>
-
-<p align="center"><sub>Made for QA learners by <a href="https://github.com/SebaGutierrezF">SebaGutierrezF</a> · Community Free v0.1.1</sub></p>
+The Free code is [MIT-licensed](LICENSE); dependencies have their own licenses ([notices](free-v0.1.1/THIRD_PARTY_NOTICES.md)). If it helped you, a star or feedback is appreciated. [Buy Me a Coffee](https://buymeacoffee.com/sebagutierrezf) is optional; no payment is required to use the project.
