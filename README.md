@@ -29,6 +29,24 @@
 
 ---
 
+## From Community Free to Pro
+
+Start here for free. This `v0.1.1` alpha includes **4 tests** against an included local demo app: 2 API and 2 Selenium UI examples.
+
+If you want a larger, separate set of learning examples, see **[QA Automation Starter Kit Pro v1.0.0 on Gumroad](https://sebagutierrez3.gumroad.com/l/qa-automation-starter-kit-pro)** (one-time **US$49** purchase).
+
+| | Community Free v0.1.1 | Pro v1.0.0 |
+| --- | --- | --- |
+| Examples | 4 (2 API + 2 UI) | 16 core + 2 separate Helpdesk |
+| Focus | Introductory local demo practice | Broader API/UI cases, Page Objects, framework checks and reports |
+| Delivery | Free source code and release ZIP on GitHub | Paid source-code ZIP via Gumroad |
+
+Both are **learning-oriented source-code toolkits**, not hosted testing services or one-click automation for arbitrary websites. Python, Selenium/pytest and compatible local prerequisites are required; ChromeDriver and offline Python wheels are not bundled. The Pro ZIP has separate reports for its core and Helpdesk examples, not one combined 18-test HTML report.
+
+Want to evaluate before buying? **Run Community Free first** using the instructions below.
+
+---
+
 ## Preview
 
 <p align="center">
