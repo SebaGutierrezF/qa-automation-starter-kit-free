@@ -1,0 +1,22 @@
+# Diagnóstico opt-in. No se ejecuta por push, PR ni cron.
+# Solo comprueba si la cuenta puede asignar un runner estándar gratuito en este repositorio público.
+name: Manual public runner check
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  runner-availability:
+    name: Standard public Ubuntu runner
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Validate Python and runner execution
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "QA_PUBLIC_RUNNER_CHECK_STARTED"
+          python3 -c "import sys; print('Python:', sys.version.split()[0]); assert sys.version_info >= (3, 10)"
+          echo "QA_PUBLIC_RUNNER_CHECK_PASS"
