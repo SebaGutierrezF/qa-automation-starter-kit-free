@@ -109,6 +109,16 @@ After **Option B** you can view the demo manually:
 
 Stop it with Ctrl+C. The login details displayed by the demo are fictional test data.
 
+## Manual GitHub Actions check (API only)
+
+A [manual CI workflow](.github/workflows/manual-free-api-pytest.yml) is available for **API-001** and **API-002**, using a standard Ubuntu runner with Python 3.12 and pytest 8.3.4.
+
+To run it, open **Actions → QA Free API tests (manual) → Run workflow → main**. It runs **only on request** (not on push, PR, or a schedule) and has a 5-minute job timeout.
+
+The workflow runs the demo HTTP server on loopback through pytest fixtures and checks that the JUnit XML contains **exactly the two expected API case names**, without failures, errors or skips. It installs pytest from PyPI in the ephemeral CI runner; **this does not change the offline-only setup behavior of the released ZIP**.
+
+**Scope:** this is **not** the four-test API+Selenium suite, and the workflow does not install Chrome or ChromeDriver. The four-test Windows execution and its [sanitized evidence](https://sebagutierrezf.github.io/proyectos/evidencia-qa.html) are documented separately. The first successful CI run is still required before claiming the API workflow itself has passed.
+
 ## Release integrity
 
 The [v0.1.1 ZIP](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/releases/tag/v0.1.1) has this SHA-256:

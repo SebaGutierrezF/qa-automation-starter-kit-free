@@ -1,0 +1,55 @@
+# Manual-only CI for the two public API tests. Nothing runs on push, PR or schedule.
+# Uses a GitHub-hosted standard runner in a public repository; does not install Chrome.
+name: QA Free API tests (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  api:
+    name: Python 3.12 / pytest API-001 + API-002
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+      PYTHONNOUSERSITE: "1"
+      NO_PROXY: "127.0.0.1,localhost"
+      no_proxy: "127.0.0.1,localhost"
+    steps:
+      - name: Checkout public Free repository
+        uses: actions/checkout@v4
+
+      - name: Configure Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned pytest in runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check "pytest==8.3.4"
+          python -c "import importlib.metadata as m; assert m.version('pytest') == '8.3.4'; print('PYTEST_PIN_OK')"
+          python -m pip check
+
+      - name: Run two real local-demo API tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pytest -q -ra \
+            --junitxml=free-v0.1.1-api-junit.xml \
+            free-v0.1.1/tests/api/test_catalog.py
+
+      - name: Require exact two-case JUnit PASS
+        shell: bash
+        run: |
+          set -euo pipefail
+          python free-v0.1.1/tools/verify_pytest_junit.py \
+            free-v0.1.1-api-junit.xml \
+            test_api_001_health test_api_002_catalog
+          echo "QA_FREE_API_CI_PASS"
+
+# No artifact uploads, external APIs, AI services, secrets, caches, deployment or write access.
