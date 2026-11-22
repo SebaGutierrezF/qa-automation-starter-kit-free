@@ -117,7 +117,7 @@ To run it, open **Actions → QA Free API tests (manual) → Run workflow → ma
 
 The workflow runs the demo HTTP server on loopback through pytest fixtures and checks that the JUnit XML contains **exactly the two expected API case names**, without failures, errors or skips. It installs pytest from PyPI in the ephemeral CI runner; **this does not change the offline-only setup behavior of the released ZIP**.
 
-**Scope:** this is **not** the four-test API+Selenium suite, and the workflow does not install Chrome or ChromeDriver. The four-test Windows execution and its [sanitized evidence](https://sebagutierrezf.github.io/proyectos/evidencia-qa.html) are documented separately. The first successful CI run is still required before claiming the API workflow itself has passed.
+**Scope:** this is **not** the four-test API+Selenium suite, and the workflow does not install Chrome or ChromeDriver. The four-test Windows execution and its [sanitized evidence](https://sebagutierrezf.github.io/proyectos/evidencia-qa.html) are documented separately. The API workflow has passed on GitHub Actions: [manual run #6, November 22, 2026](https://github.com/SebaGutierrezF/qa-automation-starter-kit-free/actions/runs/45034705183) produced `2 passed in 0.09s`, `QA_SK_002_JUNIT_OK | TESTS=2 | SKIPPED=0 | FAILURES=0` and `QA_FREE_API_CI_PASS`. That run used checkout v4 and setup-python v5; the Node.js 24 action upgrade in this change still needs its own validation.
 
 ## Release integrity
 
