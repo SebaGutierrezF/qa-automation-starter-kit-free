@@ -19,10 +19,10 @@ jobs:
       NO_PROXY: "127.0.0.1,localhost"
     steps:
       - name: Checkout public Free repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configure Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
